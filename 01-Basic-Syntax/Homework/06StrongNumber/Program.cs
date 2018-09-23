@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 public class Program {
 
-	public static bool IsStrong(int number)
+	public static bool IsStrong(long number)
 	{
 		long fact;
-		int num = number;
+		long num = number;
 		long sum = 0;
 
 		while (number != 0)
@@ -31,7 +31,7 @@ public class Program {
 	}
 	public static void Main(string[] args) {
 		
-			int number = int.Parse(Console.ReadLine());
+			long number = long.Parse(Console.ReadLine());
 			if(IsStrong(number)){
 				Console.WriteLine("yes");
 			}else{
@@ -39,4 +39,5 @@ public class Program {
 			}
 		
 		}
+
 }
