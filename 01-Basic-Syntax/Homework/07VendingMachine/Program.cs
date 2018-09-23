@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 class Program {
 		
 	static void Main(string[] args) {
-		const double COIN_01 = 0.1;
-		const double COIN_02 = 0.2;
-		const double COIN_05 = 0.5;
-		const double COIN_1 = 1;
-		const double COIN_2 = 2;
-		const double NUTS_PRICE = 2.0;
-		const double WATER_PRICE = 0.7;
-		const double CRISPS_PRICE = 1.5;
-		const double SODA_PRICE = 0.8;
-		const double COKE_PRICE = 1.0;
+		const decimal COIN_01 = 0.1M;
+		const decimal COIN_02 = 0.2M;
+		const decimal COIN_05 = 0.5M;
+		const decimal COIN_1 = 1M;
+		const decimal COIN_2 = 2M;
+		const decimal NUTS_PRICE = 2.0M;
+		const decimal WATER_PRICE = 0.7M;
+		const decimal CRISPS_PRICE = 1.5M;
+		const decimal SODA_PRICE = 0.8M;
+		const decimal COKE_PRICE = 1.0M;
 
-		double sum = 0;
+		decimal sum = 0;
 		string line = Console.ReadLine();
 		while(line != "Start") {
-			double coin = double.Parse(line);
+			decimal coin = decimal.Parse(line);
 			if(coin == COIN_01 || coin == COIN_02 || coin == COIN_05 || coin == COIN_1 || coin == COIN_2){ 
 				sum += coin;
 			}else{
