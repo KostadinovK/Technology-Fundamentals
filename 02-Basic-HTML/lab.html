@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic HTML Lab</title>
+    <style>
+        #left-div{
+            float: left;
+            width: 33%;
+        }
+        #center-div{
+            float: left;
+            width: 33%;
+        }
+        #right-div{
+            float: left;
+            width: 33%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="left-div">
+        <h1> <span>Lists</span> Exercise</h1>
+        <p>The <span>lists</span> contain at least two elements. The most common types are ordered and unordered <span>lists</span> </p>
+        <br>
+        <h2>Example</h2>
+
+        <ol>
+            <li>
+                Apple
+                <ul>
+                    <li>Fruit</li>
+                    <li>It's Healthy</li>
+                </ul>
+            </li>
+            <li>
+                Cucumber
+                <ul>
+                    <li>Vegetable</li>
+                    <li>The perfect salad ingredient</li>
+                </ul>
+            </li>
+            <li>
+                Bonster
+                <ul>
+                    <li>Energy Drink</li>
+                    <li>Contains Coffee</li>
+                </ul>
+            </li>
+        </ol>
+        <img src="data:image/png;base64,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" alt="list icon">
+    </div>
+
+    <div id = "center-div">
+        <h1> <span>Tables</span> Exercise</h1>
+        <p> <span>Tables</span> is a structured set of data made up of rows and columns</p>
+        <br>
+        <h2>Example</h2>
+
+        <table>
+            <thead>
+                <tr> <th>Programming Language</th> <th>Developed by</th> <th>First appeared</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>C#</td><td>Microsoft</td><td>2000</td></tr>
+                <tr><td>Java</td><td>Oracle</td><td>1995</td></tr>
+                <tr><td>PHP</td><td>Zend Technologies</td><td>1995</td></tr>
+            </tbody>
+        </table>
+
+        <img src="data:image/png;base64,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" alt="table icon">
+    </div>
+
+    <div id = "right-div">
+        <h1> <span>Forms</span> Exercise</h1>
+        <p>An HTML <span>Form</span> is made of one or more widgets. Those widgets can be text fields (single line or multilane), select boxes, checkboxes or radio buttons.</p>
+        <br>
+        <h2>Example</h2>
+
+        <form>
+            <label for="username-input">Username:</label>
+            <input type="text" placeholder="Enter your username" id="username-input">
+            <br>
+            <label for="password-input">Password:</label>
+            <input type="password" placeholder="Enter your password" id="password-input">
+            <br>
+            <label for="email-input">Email:</label>
+            <input type="email" placeholder="Enter your email" id="email-input">
+            <br>
+            <label for="option1-input">Age:</label>
+            <input type="radio" id="option1-input" value="Under 20">
+            <label for="option1-input">Under 20</label>
+            <input type="radio" id="option2-input" value="20 or more">
+            <label for="option2-input">20 or more</label>
+        </form>
+
+        <img src="https://cdn3.iconfinder.com/data/icons/interaction-design/512/Form2-512.png" alt="form icon">
+    </div>
+    
+</body>
+</html>
