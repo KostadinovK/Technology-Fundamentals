@@ -10,39 +10,53 @@ public class Program
 	{
 		string input = Console.ReadLine();
 
-		string toRepeat = "";
-		StringBuilder sb = new StringBuilder();
-
-		List<char> uniqueChars = new List<char>();
-		string times = "";
+		StringBuilder res = new StringBuilder();
+		HashSet<char> uniqueChars = new HashSet<char>();
+		string toPrint = "";
+		string timesStr = "";
 		for (int i = 0;i < input.Length;i++)
 		{
-			if ((input[i] < '0' || input[i] > '9') && times.Length == 0)
+			if (input[i] < '0' || input[i] > '9')
 			{
-				toRepeat += input[i].ToString().ToUpper();
-				if (!uniqueChars.Contains(input[i].ToString().ToUpper()[0]))
-				{
-					uniqueChars.Add(input[i].ToString().ToUpper()[0]);
-				}
+				toPrint += input[i];
+				char upper = input[i].ToString().ToUpper()[0];
+				uniqueChars.Add(upper);
 			}
-			else if(input[i] >= '0' && input[i] <= '9')
+			else
 			{
-				times += input[i];
-			}else if ((input[i] < '0' || input[i] > '9') && times.Length != 0)
-			{
-				int timesNum = int.Parse(times);
-				for (int j = 0;j < timesNum;j++)
-				{
-					sb.Append(toRepeat);
-				}
+				int num = 0;
 
-				toRepeat = "";
-				times = "";
-				
+				if (i == input.Length - 1)
+				{
+					num = int.Parse(input[i].ToString());
+				}
+				else
+				{
+					if (!char.IsNumber(input[i + 1]))
+					{
+						num = int.Parse(input[i].ToString());
+					}
+					else
+					{
+						num = int.Parse(input[i] + input[i + 1].ToString());
+						i += 1;
+					}
+
+				}
+				toPrint = toPrint.ToUpper();
+				for (int j = 0; j < num; j++)
+				{
+					
+					res.Append(toPrint);
+					
+				}
+				toPrint = "";
 			}
+
 		}
 
-		Console.WriteLine("Unique symbols used: " + uniqueChars.Count);
-		Console.WriteLine(sb);
+		string output = res.ToString();
+		Console.WriteLine("Unique symbols used: " + output.Distinct().Count());
+		Console.WriteLine(output);
 	}
 }
